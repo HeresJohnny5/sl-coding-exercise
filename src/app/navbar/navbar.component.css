@@ -37,3 +37,7 @@ nav {
   height: 25px;
   width: 25px;
 }
+
+.dropdown > a, .dropdown > a:hover {
+  color: #fff;
+}
