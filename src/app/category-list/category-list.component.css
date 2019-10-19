@@ -6,12 +6,19 @@
   border-top: none;
 }
 
+.header-section {
+  padding: 19px 0 22px 25px;
+}
+
+.header-add-category {
+  padding: 19px 10px 22px 0;
+}
+
 .header-section > span {
   font-family: Helvetica;
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 3px;
-  padding: 19px 0 22px 20px;
   width: 49px;
 }
 
@@ -25,5 +32,16 @@
   font-size: 10px;
   height: 10px;
   width: 98px;
+}
+
+
+
+
+
+
+.category img {
+  height: 9.7px;
+  object-fit: contain;
+  width: 10.6px;
 }
 
