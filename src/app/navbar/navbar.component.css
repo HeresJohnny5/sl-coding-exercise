@@ -1,10 +1,35 @@
 nav {
   background-color: #0a3645;
   min-height: 40px;
+  padding-left: 0;
 }
 
 .active {
   background-color: #4a636c;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.nav-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  text-align: center;
+  width: 95.2px;
+}
+
+.nav-item:hover {
+  color: #fff;
+}
+
+.nav-item > a {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .navbar-brand > img {
