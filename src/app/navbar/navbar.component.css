@@ -1,0 +1,14 @@
+nav {
+  background-color: #0a3645;
+  min-height: 40px;
+}
+
+.active {
+  background-color: #4a636c;
+}
+
+.navbar-brand > img {
+  object-fit: contain;
+  height: 25px;
+  width: 25px;
+}
