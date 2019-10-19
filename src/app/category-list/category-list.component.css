@@ -1,9 +1,29 @@
-.table-striped > tbody>tr:nth-child(odd) > td, 
-.table-striped > tbody>tr:nth-child(odd) > th {
-   background-color: #fff; 
- }
+.header-top {
+  border-bottom: none;
+}
 
-.table-striped > tbody>tr:nth-child(even) > td, 
-.table-striped > tbody>tr:nth-child(even) > th {
-   background-color: #f2f2f2; 
- }
+.header-bottom {
+  border-top: none;
+}
+
+.header-section > span {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  padding: 19px 0 22px 20px;
+  width: 49px;
+}
+
+.header-add-category {
+  text-align: right;
+}
+
+.header-add-category > span {
+  color: #06b4de;
+  font-family: Helvetica;
+  font-size: 10px;
+  height: 10px;
+  width: 98px;
+}
+
