@@ -1,20 +1,26 @@
-.header-top {
+table {
+  box-shadow: 0 1px 3px 0 rgba(10, 54, 69, 0.16);
+  margin: 3em auto;
+  width: 96%;
+}
+
+td, .header-col-1, .category-col-1 {
+  padding: 19px 0 22px 25px;
+}
+
+.header-top > th {
   border-bottom: none;
 }
 
-.header-bottom {
+.header-bottom > th {
   border-top: none;
-}
-
-.header-section {
-  padding: 19px 0 22px 25px;
 }
 
 .header-add-category {
   padding: 19px 10px 22px 0;
 }
 
-.header-section > span {
+.header-col-1 > span {
   font-family: Helvetica;
   font-size: 14px;
   font-weight: normal;
@@ -26,6 +32,13 @@
   text-align: right;
 }
 
+.header-category {
+  color: #7a8a90;
+  font-family: Helvetica;
+  padding-left: 0;
+  width: 53px;
+}
+
 .header-add-category > span {
   color: #06b4de;
   font-family: Helvetica;
@@ -34,14 +47,52 @@
   width: 98px;
 }
 
+.table-striped > tbody > tr:nth-child(even) > td, 
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #f2f2f2;
+}
 
+.table-striped > tbody > tr:nth-child(odd) > td, 
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #fff;
+}
 
+.category-col-2, .category-col-3, .category-col-4 {
+  padding-left: 0;
+}
 
+.category-col-1, .category-col-4 {
+  width: 10%;
+}
 
+.category-col-2 {
+  width: 30%;
+}
 
-.category img {
+.category-col-3 {
+  width: 40%;
+}
+
+.category-col-4 {
+  padding-right: 14px;
+  text-align: right;
+}
+
+.category-col-3 > span {
+  background-color: #98cb65;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.draggable-icon {
   height: 9.7px;
   object-fit: contain;
   width: 10.6px;
+}
+
+.remove-category {
+  height: 27px;
+  width: 27px;
 }
 
