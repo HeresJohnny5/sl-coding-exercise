@@ -1,14 +1,38 @@
-<section id="table">
-  <table class="table table-striped">
+<section>
+  <table id="table" class="table table-striped">
     <thead>
       <tr class="header-top">
-        <th scope="col" class="header-col-1">
+        <th scope="col" class="header-section-col">
           <span>Section</span>
         </th>
         <th scope="col"></th>
         <th scope="col"></th>
-        <th scope="col" class="header-add-category">
-          <span>+ ADD A CATEGORY</span>
+        <th scope="col" class="header-add-category-col">
+          <span class="add-category" (click)="onClickAddCategory()">+ ADD A CATEGORY</span>
+        </th>
+      </tr>
+      <tr class="header-bottom">
+        <th scope="col"></th>
+        <th scope="col" class="header-category">CATEGORY</th>
+        <th scope="col" class="header-category">SEQ</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- <section>
+  <table id="table" class="table table-striped">
+    <thead>
+      <tr class="header-top">
+        <th scope="col" class="header-section-col">
+          <span>Section</span>
+        </th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col" class="header-add-category-col">
+          <span class="add-category" (click)="onClickAddCategory()">+ ADD A CATEGORY</span>
         </th>
       </tr>
       <tr class="header-bottom">
@@ -19,7 +43,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr id="tb-row-1">
         <td class="category category-col-1">
           <span>
             <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
@@ -37,101 +61,6 @@
           </span>
         </td>
       </tr>
-
-      <tr>
-        <td class="category category-col-1">
-          <span>
-            <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
-          </span>
-        </td>
-        <td class="category category-col-2">
-          <span>Category 2</span>
-        </td>
-        <td class="category category-col-3">
-          <span>2</span>
-        </td>
-        <td class="category category-col-4">
-          <span>
-            <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-category" alt="Remove Category">
-          </span>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="category category-col-1">
-          <span>
-            <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
-          </span>
-        </td>
-        <td class="category category-col-2">
-          <span>Category 3</span>
-        </td>
-        <td class="category category-col-3">
-          <span>3</span>
-        </td>
-        <td class="category category-col-4">
-          <span>
-            <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-category" alt="Remove Category">
-          </span>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="category category-col-1">
-          <span>
-            <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
-          </span>
-        </td>
-        <td class="category category-col-2">
-          <span>Category 4</span>
-        </td>
-        <td class="category category-col-3">
-          <span>4</span>
-        </td>
-        <td class="category category-col-4">
-          <span>
-            <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-category" alt="Remove Category">
-          </span>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="category category-col-1">
-          <span>
-            <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
-          </span>
-        </td>
-        <td class="category category-col-2">
-          <span>Category 5</span>
-        </td>
-        <td class="category category-col-3">
-          <span>5</span>
-        </td>
-        <td class="category category-col-4">
-          <span>
-            <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-category" alt="Remove Category">
-          </span>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="category category-col-1">
-          <span>
-            <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
-          </span>
-        </td>
-        <td class="category category-col-2">
-          <span>Category 6</span>
-        </td>
-        <td class="category category-col-3">
-          <span>6</span>
-        </td>
-        <td class="category category-col-4">
-          <span>
-            <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-category" alt="Remove Category">
-          </span>
-        </td>
-      </tr>
     </tbody>
   </table>
-</section>
+</section> -->
