@@ -31,13 +31,15 @@
         <td class="category category-col-3">
           <span>{{i + 1}}</span>
         </td>
-        <td *ngIf="!tableField.saveState; else removeField" class="category category-col-4">
-          <button class="remove-row" alt="Draggable Category Icon" type="button" (click)="onClickSaveCategory(i)">SAVE</button>
+        <td *ngIf="!tableField.saveState; else removeField" class="category-save">
+          <button class="remove-row" alt="Save Category Icon" type="button" (click)="onClickSaveCategory(i)">SAVE</button>
         </td>
         <ng-template #removeField>
-          <span>
-            <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-row" alt="Draggable Category Icon" (click)="onClickRemoveRow(i)">
-          </span>
+          <td class="field-remove">
+            <span>
+              <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-row" alt="Remove Field Icon" (click)="onClickRemoveRow(i)">
+            </span>
+          </td>
         </ng-template>
       </tr>
     </tbody>

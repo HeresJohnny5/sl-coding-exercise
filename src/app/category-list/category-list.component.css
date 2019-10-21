@@ -69,9 +69,23 @@ td, .header-section-col, .category-col-1 {
   width: 40%;
 }
 
-.category-col-4 {
-  padding-right: 14px;
-  text-align: right;
+.category-save, .field-remove {
+  text-align: right
+}
+
+.category-save {
+  padding-right: 22px;
+}
+
+.category-save > button {
+  background-color: transparent;
+  border: none;
+  color: #06b4de;
+  font-size: 12px;
+}
+
+.field-remove {
+  padding-right: 12px;
 }
 
 .category-col-3 > span {
