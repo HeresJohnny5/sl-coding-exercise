@@ -13,14 +13,24 @@ export class CategoryListComponent implements OnInit {
 
   private tableFieldArray: Array<any> = [];
   private newAttribute: any = {};
-  public saveField: boolean = false;
 
-  onClickAddRow() {
+  onClickAddRow(index) {
     this.tableFieldArray.push(this.newAttribute)
-    // this.newAttribute = {};
+    this.newAttribute = {};
+
+    // console.log('ADD ROW: ', this.tableFieldArray);
   }
 
   onClickRemoveRow(index) {
     this.tableFieldArray.splice(index, 1);
+  }
+
+  onClickSaveCategory(index) {
+    this.tableFieldArray[index].saveState = true;
+
+    // console.log('SAVE: ', this.tableFieldArray);
+
+    this.tableFieldArray.push(this.newAttribute)
+    this.newAttribute = {};
   }
 }
