@@ -4,7 +4,7 @@ table {
   width: 96%;
 }
 
-td, .header-section-col, .category-col-1 {
+td, .header-section-col, .col-1 {
   padding: 19px 0 22px 25px;
 }
 
@@ -35,12 +35,13 @@ td, .header-section-col, .category-col-1 {
   padding-left: 0;
 }
 
-.header-add-category > span {
+.header-add-category > button {
+  background-color: transparent;
+  border: none;
   color: #06b4de;
   font-family: Helvetica;
-  font-size: 10px;
-  height: 10px;
-  width: 98px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .table-striped > tbody > tr:nth-child(even) > td, 
@@ -53,19 +54,19 @@ td, .header-section-col, .category-col-1 {
   background-color: #fff;
 }
 
-.category-col-2, .category-col-3, .category-col-4 {
+.col-2, .col-3 {
   padding-left: 0;
 }
 
-.category-col-1, .category-col-4 {
+.col-1 {
   width: 10%;
 }
 
-.category-col-2 {
+.col-2 {
   width: 30%;
 }
 
-.category-col-3 {
+.col-3 {
   width: 40%;
 }
 
@@ -74,7 +75,7 @@ td, .header-section-col, .category-col-1 {
 }
 
 .category-save {
-  padding-right: 22px;
+  padding-right: 5px;
 }
 
 .category-save > button {
@@ -88,7 +89,7 @@ td, .header-section-col, .category-col-1 {
   padding-right: 12px;
 }
 
-.category-col-3 > span {
+.col-3 > span {
   background-color: #98cb65;
   border-radius: 5px;
   color: #fff;
@@ -101,7 +102,7 @@ td, .header-section-col, .category-col-1 {
   width: 10.6px;
 }
 
-.remove-row {
+.remove-row-icon {
   height: 27px;
   width: 27px;
 }

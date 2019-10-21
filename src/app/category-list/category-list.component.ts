@@ -13,12 +13,12 @@ export class CategoryListComponent implements OnInit {
 
   private tableFieldArray: Array<any> = [];
   private newAttribute: any = {};
+  public addCategoryState: boolean = false;
 
   onClickAddRow(index) {
+    this.addCategoryState = true;
     this.tableFieldArray.push(this.newAttribute)
     this.newAttribute = {};
-
-    // console.log('ADD ROW: ', this.tableFieldArray);
   }
 
   onClickRemoveRow(index) {
@@ -26,10 +26,7 @@ export class CategoryListComponent implements OnInit {
   }
 
   onClickSaveCategory(index) {
-    this.tableFieldArray[index].saveState = true;
-
-    // console.log('SAVE: ', this.tableFieldArray);
-
+    this.addCategoryState = false;
     this.tableFieldArray.push(this.newAttribute)
     this.newAttribute = {};
   }

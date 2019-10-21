@@ -8,36 +8,37 @@
         <th scope="col"></th>
         <th scope="col"></th>
         <th scope="col" class="header-add-category">
-          <span class="add-category" (click)="onClickAddRow()">+ ADD A CATEGORY</span>
+          <button type="button" class="add-category" (click)="onClickAddRow()" [disabled]="addCategoryState">+ ADD A CATEGORY</button>
+          <!-- <span class="add-category" (click)="onClickAddRow()">+ ADD A CATEGORY</span> -->
         </th>
       </tr>
       <tr class="header-bottom">
-        <th scope="col"></th>
-        <th scope="col" class="header-bottom-col">CATEGORY</th>
-        <th scope="col" class="header-bottom-col">SEQ</th>
+        <th scope="col" class="col-1"></th>
+        <th scope="col" class="header-bottom-col col-2">CATEGORY</th>
+        <th scope="col" class="header-bottom-col col-3">SEQ</th>
         <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let tableField of tableFieldArray; let i = index" id="tb-row-1">
-        <td class="category category-col-1">
+        <td class="category col-1">
           <span>
             <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
           </span>
         </td>
-        <td class="category category-col-2">
+        <td class="category col-2">
           <input [(ngModel)]="tableField.name" type="text" name="{tableField.name}" placeholder="category">
         </td>
-        <td class="category category-col-3">
+        <td class="category col-3">
           <span>{{i + 1}}</span>
         </td>
         <td *ngIf="!tableField.saveState; else removeField" class="category-save">
-          <button class="remove-row" alt="Save Category Icon" type="button" (click)="onClickSaveCategory(i)">SAVE</button>
+          <button type="button" (click)="onClickSaveCategory()">SAVE</button>
         </td>
         <ng-template #removeField>
           <td class="field-remove">
             <span>
-              <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-row" alt="Remove Field Icon" (click)="onClickRemoveRow(i)">
+              <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-row-icon" alt="Remove Field Icon" (click)="onClickRemoveRow(i)">
             </span>
           </td>
         </ng-template>
