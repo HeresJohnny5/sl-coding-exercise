@@ -7,14 +7,14 @@
         </th>
         <th scope="col"></th>
         <th scope="col"></th>
-        <th scope="col" class="header-add-category-col">
-          <span class="add-category" (click)="onClickAddCategory()">+ ADD A CATEGORY</span>
+        <th scope="col" class="header-add-category">
+          <span class="add-category" (click)="onClickAddRow()">+ ADD A CATEGORY</span>
         </th>
       </tr>
       <tr class="header-bottom">
         <th scope="col"></th>
-        <th scope="col" class="header-category">CATEGORY</th>
-        <th scope="col" class="header-category">SEQ</th>
+        <th scope="col" class="header-bottom-col">CATEGORY</th>
+        <th scope="col" class="header-bottom-col">SEQ</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -26,16 +26,21 @@
           </span>
         </td>
         <td class="category category-col-2">
-          <input type="text" name="category" placeholder="category">
+          <input [(ngModel)]="tableField.name" type="text" name="{tableField.name}" placeholder="category">
         </td>
         <td class="category category-col-3">
-          <span>1</span>
+          <span>{{i + 1}}</span>
         </td>
-        <td class="category category-col-4">
-          <span>
-            <p (click)="onClickSaveCategory()">Save</p>
-          </span>
+        <td *ngIf="saveField; else removeField" class="category category-col-4">
+          <button class="remove-row" alt="Draggable Category Icon" type="button" (click)="addFieldValue()">SAVE</button>
         </td>
+        <ng-template #removeField>
+          <td class="category category-col-4">
+            <span>
+              <img src="../../assets/images/icon/icon-remove/Group 15571.svg" class="remove-row" alt="Draggable Category Icon" (click)="onClickRemoveRow(i)">
+            </span>
+          </td>
+        </ng-template>
       </tr>
     </tbody>
   </table>

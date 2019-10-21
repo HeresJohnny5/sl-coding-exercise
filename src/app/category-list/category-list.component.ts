@@ -12,4 +12,15 @@ export class CategoryListComponent implements OnInit {
   ngOnInit() { }
 
   private tableFieldArray: Array<any> = [];
+  private newAttribute: any = {};
+  public saveField: boolean = false;
+
+  onClickAddRow() {
+    this.tableFieldArray.push(this.newAttribute)
+    // this.newAttribute = {};
+  }
+
+  onClickRemoveRow(index) {
+    this.tableFieldArray.splice(index, 1);
+  }
 }
