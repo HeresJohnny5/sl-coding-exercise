@@ -15,7 +15,7 @@ export class CategoryListComponent implements OnInit {
   private newAttribute: any = {};
   public addCategoryState: boolean = false;
 
-  onClickAddRow(index) {
+  onClickAddRow() {
     this.addCategoryState = true;
     this.tableFieldArray.push(this.newAttribute)
     this.newAttribute = {};
@@ -27,7 +27,13 @@ export class CategoryListComponent implements OnInit {
 
   onClickSaveCategory(index) {
     this.addCategoryState = false;
+    this.tableFieldArray[index].saveState = true;
     this.tableFieldArray.push(this.newAttribute)
     this.newAttribute = {};
+  }
+
+  dragStart(event, i) {
+    console.log('dragStart - event, i: ', event, i);
+    event.dataTransfer.setData("text/plain", event.target.innerText);
   }
 }

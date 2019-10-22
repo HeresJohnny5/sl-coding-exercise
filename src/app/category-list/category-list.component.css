@@ -106,3 +106,7 @@ td, .header-section-col, .col-1 {
   height: 27px;
   width: 27px;
 }
+
+button.add-category:disabled {
+  color: #bfcfd5;
+}
