@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() { }
@@ -21,19 +22,27 @@ export class CategoryListComponent implements OnInit {
     this.newAttribute = {};
   }
 
-  onClickRemoveRow(index) {
-    this.tableFieldArray.splice(index, 1);
+  onClickRemoveRow(i: number) {
+    this.tableFieldArray.splice(i, 1);
   }
 
-  onClickSaveCategory(index) {
+  onClickSaveCategory(i: number) {
     this.addCategoryState = false;
-    this.tableFieldArray[index].saveState = true;
+    this.tableFieldArray[i].saveState = true;
     this.tableFieldArray.push(this.newAttribute)
     this.newAttribute = {};
   }
 
-  dragStart(event, i) {
-    console.log('dragStart - event, i: ', event, i);
-    event.dataTransfer.setData("text/plain", event.target.innerText);
+  dragStart(event: DragEvent, i: number) {
+    const closestTableRow = $(event.target).closest('tr');
+    console.log('closestTableRow: ', closestTableRow);
+  }
+
+  dragMove(event: DragEvent, i: number) {
+    console.log('dragMove');
+  }
+
+  dragEnd(event: DragEvent, i: number) {
+    console.log('dragEnd');
   }
 }
