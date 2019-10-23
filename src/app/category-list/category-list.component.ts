@@ -13,7 +13,7 @@ export class CategoryListComponent implements OnInit {
 
   ngOnInit() { }
 
-  private tableFieldArray: Array<any> = [];
+  public tableFieldArray: Array<any> = [];
   private newAttribute: any = {};
   public addCategoryState: boolean = false;
 
