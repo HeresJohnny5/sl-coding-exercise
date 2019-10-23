@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
+import 'jquery-ui/ui/widgets/sortable.js';
 
 @Component({
   selector: 'app-category-list',
@@ -10,7 +11,18 @@ import * as $ from 'jquery';
 export class CategoryListComponent implements OnInit {
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    $("tbody").sortable({
+      axis: "y",
+      containment: "tbody",
+      helper: (e, row) => {
+        row.children().each(function () {
+          $(this).width($(this).width());
+        });
+        return row;
+      }
+    });
+  }
 
   private tableFieldArray: Array<any> = [];
   private newAttribute: any = {};
@@ -33,16 +45,16 @@ export class CategoryListComponent implements OnInit {
     this.newAttribute = {};
   }
 
-  dragStart(event: DragEvent, i: number) {
-    const closestTableRow = $(event.target).closest('tr');
-    console.log('closestTableRow: ', closestTableRow);
-  }
+  // dragStart(event: DragEvent, i: number) {
+  //   const closestTableRow = $(event.target).closest('tr');
+  //   console.log('closestTableRow: ', closestTableRow);
+  // }
 
-  dragMove(event: DragEvent, i: number) {
-    console.log('dragMove');
-  }
+  // dragMove(event: DragEvent, i: number) {
+  //   console.log('dragMove');
+  // }
 
-  dragEnd(event: DragEvent, i: number) {
-    console.log('dragEnd');
-  }
+  // dragEnd(event: DragEvent, i: number) {
+  //   console.log('dragEnd');
+  // }
 }

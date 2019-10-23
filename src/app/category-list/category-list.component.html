@@ -19,8 +19,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr id="tb-row-{{i + 1}}" class="tb-row" draggable="true" (dragstart)="dragStart($event, i)" (dragmove)="dragMove($event, i)" (dragend)="dragEnd($event, i)"
-        *ngFor="let tableField of tableFieldArray; let i = index">
+      <tr id="tb-row-{{i + 1}}" class="tb-row" *ngFor="let tableField of tableFieldArray; let i = index">
         <td class="category col-1">
           <span>
             <img src="../../assets/images/icon/icon-draggable/Group 11070.svg" class="draggable-icon" alt="Draggable Category Icon">
