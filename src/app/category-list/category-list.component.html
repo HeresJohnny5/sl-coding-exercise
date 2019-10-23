@@ -32,7 +32,7 @@
           <span>{{i + 1}}</span>
         </td>
         <td *ngIf="!tableField.saveState; else removeField" class="category-save">
-          <button type="button" (click)="onClickSaveCategory(i)">SAVE</button>
+          <button [disabled]="tableField.name === undefined || tableField.name.length === 0" type="button" (click)="onClickSaveCategory(i)">SAVE</button>
         </td>
         <ng-template #removeField>
           <td class="field-remove">

@@ -107,6 +107,6 @@ td, .header-section-col, .col-1 {
   width: 27px;
 }
 
-button.add-category:disabled {
+button.add-category:disabled, td.category-save > button:disabled {
   color: #bfcfd5;
 }
