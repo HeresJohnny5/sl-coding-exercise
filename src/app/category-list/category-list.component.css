@@ -115,6 +115,10 @@ button.add-category:disabled, td.category-save > button:disabled {
   color: #bfcfd5;
 }
 
+input.ng-touched {
+  background: none;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
 

@@ -26,7 +26,7 @@
           </span>
         </td>
         <td class="category col-2">
-          <input [(ngModel)]="tableField.name" type="text" name="{tableField.name}" placeholder="category">
+          <input [(ngModel)]="tableField.name" (keydown.enter)="onClickSaveCategory(i)" type="text" name="{tableField.name}" placeholder="category">
         </td>
         <td class="category col-3">
           <span>{{i + 1}}</span>
