@@ -20,7 +20,8 @@ export class CategoryListComponent implements OnInit {
           $(this).width($(this).width());
         });
         return row;
-      }
+      },
+      items: 'tr:not(:last)'
     });
   }
 
