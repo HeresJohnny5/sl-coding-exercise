@@ -31,7 +31,7 @@ export class CategoryListComponent implements OnInit {
         });
         return row;
       },
-      items: 'tr:not(:last)'
+      items: "tr:not(:last)"
     });
   }
 
@@ -40,22 +40,13 @@ export class CategoryListComponent implements OnInit {
   }
 
   onClickSaveCategory(i: number) {
+    const inputField = $(`#tb-row-${i + 1} input`);
+    inputField.prop("disabled", true);
+    inputField.css("border", "none");
+
     this.addCategoryState = false;
     this.tableFieldArray[i].saveState = true;
     this.tableFieldArray.push(this.newAttribute)
     this.newAttribute = {};
   }
-
-  // dragStart(event: DragEvent, i: number) {
-  //   const closestTableRow = $(event.target).closest('tr');
-  //   console.log('closestTableRow: ', closestTableRow);
-  // }
-
-  // dragMove(event: DragEvent, i: number) {
-  //   console.log('dragMove');
-  // }
-
-  // dragEnd(event: DragEvent, i: number) {
-  //   console.log('dragEnd');
-  // }
 }

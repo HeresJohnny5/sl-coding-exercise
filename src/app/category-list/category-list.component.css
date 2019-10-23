@@ -8,6 +8,10 @@ td, .header-section-col, .col-1 {
   padding: 19px 0 22px 25px;
 }
 
+.header-section-col > span {
+  font-weight: 300;
+}
+
 .header-top > th {
   border-bottom: none;
 }
@@ -109,4 +113,9 @@ td, .header-section-col, .col-1 {
 
 button.add-category:disabled, td.category-save > button:disabled {
   color: #bfcfd5;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+
 }

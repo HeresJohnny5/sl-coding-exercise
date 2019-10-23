@@ -38,6 +38,10 @@ nav {
   width: 25px;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
 .dropdown > a, .dropdown > a:hover {
   color: #fff;
 }
