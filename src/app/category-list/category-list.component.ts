@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as $ from 'jquery';
 import 'jquery-ui/ui/widgets/sortable.js';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-category-list',
@@ -11,7 +11,17 @@ import 'jquery-ui/ui/widgets/sortable.js';
 export class CategoryListComponent implements OnInit {
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  private tableFieldArray: Array<any> = [];
+  private newAttribute: any = {};
+  public addCategoryState: boolean = false;
+
+  onClickAddRow() {
+    this.addCategoryState = true;
+    this.tableFieldArray.push(this.newAttribute)
+    this.newAttribute = {};
+
     $("tbody").sortable({
       axis: "y",
       containment: "tbody",
@@ -23,16 +33,6 @@ export class CategoryListComponent implements OnInit {
       },
       items: 'tr:not(:last)'
     });
-  }
-
-  private tableFieldArray: Array<any> = [];
-  private newAttribute: any = {};
-  public addCategoryState: boolean = false;
-
-  onClickAddRow() {
-    this.addCategoryState = true;
-    this.tableFieldArray.push(this.newAttribute)
-    this.newAttribute = {};
   }
 
   onClickRemoveRow(i: number) {
