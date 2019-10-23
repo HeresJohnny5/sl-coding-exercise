@@ -120,6 +120,20 @@ input.ng-touched {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 576px) {
+@media (max-width: 575.98px) {
+  button.add-category {
+    width: 12em;
+  }
 
+  .header-bottom-col {
+    font-size: 10px;
+  }
+
+  .col-2 {
+    width: 75%;
+  }
+
+.ml-auto >  {
+    padding-left: 30px !important;
+  }
 }

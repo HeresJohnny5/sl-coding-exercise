@@ -45,3 +45,11 @@ nav {
 .dropdown > a, .dropdown > a:hover {
   color: #fff;
 }
+
+.dropdown-menu {
+  position: absolute;
+}
+
+.dropdown-toggle {
+  padding-left: 30px;
+}
